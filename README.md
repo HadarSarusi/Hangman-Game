@@ -1,38 +1,143 @@
-﻿Hang Man
+# 🎮 Hangman Game – Python Edition 🎮
 
-* Description
+> 🕹️ Interactive Hangman game built in **Python**  
+> 🎨 Customizable themes, levels & character wardrobe  
+> 🧠 Includes scoring system and Top 10 leaderboard  
 
-        A game of Hang Man using python,
-        the game starts with some requests from the user about his user_name, preferred figure wardrobe, preferred level and preferred theme,
-        the word is being chosen randomly according to the user's preferred theme ,the number of clues are being determined by the user's preferred level,
-        each iteration the user is requested to enter a single letter and print whether the letter exist in the word,
-        in case the letter was wrong another part is added to the output of the gallows and the figure,
-        after 7 wrong attempts (the human is fully hanging) the user gets notify about his failure and the round is over
-        in case the user successfully guessed all the letters in the word currently the user gets notify about his success and the round is over,
-        in the end of every round the user is asked whether he would like to play another game in addition the user's score is being calculated and stored,
-        when the user decide to end the game his final score is calculate and inserted into its current position in the list of scores,
-        afterwords the ten top player are printed.
+---
 
-* Instruction
+## 🧾 Project Overview 🧾
 
-        - install Pyautogui module from pip 
+This project implements a fully interactive **Hangman game** written in **Python**.
 
-            in some IDEs (like PyCharm) the option of "os.system('cls'/'clear')" isn't actually cleaning the output screen,
-            in order to overcome this obstacle it's to install Pyautogui module,
-            afterwords it's necessary to define the keyboard shortcut for "clear all" as 'alt'+'d'
-            and then call pyautogui.hotkey('alt'+'d')
+At the beginning of each game session, the user selects:
 
-        - install Pyfiglet module from pip
+- 👤 User name  
+- 👕 Preferred character wardrobe  
+- 🎯 Difficulty level  
+- 🎭 Word theme  
 
-            in order to print designed and enlarge output use this module,
-            this is the way it's work: print(pyfiglet.figlet_format('the requested word',font = 'the font'))
+The game then:
 
-* Credit
+- 🎲 Randomly selects a word according to the chosen theme  
+- 🔍 Determines number of clues based on selected difficulty  
+- ⌨️ Requests the user to enter one letter per iteration  
+- ✅ Checks if the letter exists in the word  
+- ❌ Adds a new part to the gallows after each wrong attempt  
 
- Evyatar Baruch
-    [LinkedIn - evyatar-baruch](https://www.linkedin.com/in/evyatar-baruch-0947a3244) ,[GitHub - aviaMader](https://github.com/aviaMader)
+After **7 wrong attempts**, the player loses.  
+If the player guesses all letters correctly — they win 🏆  
 
-  Hadar Sarusi 
-    [LinkedIn - hadar-sarusi](https://www.linkedin.com/in/hadar-sarusi) ,[GitHub - HadarSarusi](https://github.com/HadarSarusi)
+At the end of each round:
 
- 
+- 📊 Score is calculated  
+- 🗂️ Score is stored  
+- 🥇 Top 10 players leaderboard is updated  
+- 🔄 Player can choose to start a new round  
+
+---
+
+## 🛠️ Technologies & Tools 🛠️
+
+### 💻 Core Technology
+- 🐍 Python 3  
+
+### 📦 External Libraries
+- 🖥️ `pyautogui` – for clearing screen in certain IDEs  
+- 🎨 `pyfiglet` – for styled and enlarged text output  
+
+---
+
+## ⚙️ Installation & Setup ⚙️
+
+### 📥 Install Required Modules
+
+```bash
+pip install pyautogui
+pip install pyfiglet
+```
+
+---
+
+### 🧼 Clearing Screen in Certain IDEs
+
+In some IDEs (e.g., PyCharm),  
+`os.system('cls')` or `os.system('clear')` may not properly clear the console.
+
+To solve this:
+
+1. Install `pyautogui`
+2. Define the IDE shortcut for "Clear All" as:
+
+```
+ALT + D
+```
+
+3. Call:
+
+```python
+pyautogui.hotkey('alt', 'd')
+```
+
+---
+
+### 🎨 Styled Output with Pyfiglet
+
+To print enlarged, designed text:
+
+```python
+import pyfiglet
+print(pyfiglet.figlet_format("Your Word", font="slant"))
+```
+
+---
+
+## 🎮 Game Features 🎮
+
+- 🎭 Multiple word themes  
+- 🎯 Adjustable difficulty levels  
+- 👕 Custom character wardrobe  
+- 🎲 Random word selection  
+- 🪢 Visual hanging progression  
+- 📊 Score tracking  
+- 🥇 Top 10 leaderboard system  
+- 🔄 Multiple rounds per session  
+
+---
+
+## 🧠 Programming Concepts Applied 🧠
+
+- 🎯 Input validation  
+- 🔁 Loop control & game flow management  
+- 📂 Score persistence & sorting  
+- 🎲 Randomization  
+- 🧩 Modular function-based structure  
+
+---
+
+## ▶️ Running the Game ▶️
+
+1. Make sure Python 3 is installed  
+2. Install required libraries  
+3. Run the main file:
+
+```bash
+python main.py
+```
+
+(or run directly from your IDE)
+
+---
+
+## 👩‍💻 Authors & Credits 👩‍💻
+
+- ⚡ **Hadar Sarusi** ⚡  
+  [![GitHub](https://img.shields.io/badge/GITHUB-HADARSARUSI-1F6FEB?style=for-the-badge&logo=github&logoColor=white)](https://github.com/HadarSarusi)
+
+- 🔥 **Evyatar Baruch** 🔥  
+  [![GitHub](https://img.shields.io/badge/GITHUB-AVIAMADER-0D1117?style=for-the-badge&logo=github&logoColor=white)](https://github.com/aviaMader)
+
+
+---
+
+> ⭐ If you enjoyed this project – feel free to leave a star! ⭐
